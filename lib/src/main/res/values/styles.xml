@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="defaultChartBindingStyle">
+        <item name="chart_item_a">@color/chart_item_a</item>
+        <item name="chart_item_b">@color/chart_item_b</item>
+        <item name="chart_item_c">@color/chart_item_c</item>
+        <item name="chart_item_d">@color/chart_item_d</item>
+        <item name="chart_item_e">@color/chart_item_e</item>
+        <item name="chart_item_f">@color/chart_item_f</item>
+        <item name="chart_item_g">@color/chart_item_g</item>
+        <item name="chart_item_h">@color/chart_item_h</item>
+        <item name="chart_item_i">@color/chart_item_i</item>
+        <item name="chart_item_j">@color/chart_item_j</item>
+        <item name="chart_background">@color/chart_background</item>
+        <item name="chart_text">@color/chart_text</item>
+        <item name="chart_subtext">@color/chart_subtext</item>
+    </style>
+</resources>

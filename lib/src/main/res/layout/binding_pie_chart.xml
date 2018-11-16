@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:bind2="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.github.mikephil.charting.data.PieData" />
+
+        <variable
+            name="globalOptions"
+            type="github.hotstu.chartbinding.GlobalOptions" />
+
+        <variable
+            name="customOptions"
+            type="github.hotstu.chartbinding.CustomOptions" />
+
+        <variable
+            name="legendOptions"
+            type="github.hotstu.chartbinding.LegendOptions" />
+
+        <variable
+            name="xAxisOptions"
+            type="github.hotstu.chartbinding.XAxisOptions" />
+
+        <variable
+            name="leftAxisOptions"
+            type="github.hotstu.chartbinding.YAxisOptions" />
+
+        <variable
+            name="rightAxisOptions"
+            type="github.hotstu.chartbinding.YAxisOptions" />
+
+        <variable
+            name="animateX"
+            type="boolean" />
+
+        <variable
+            name="animateY"
+            type="boolean" />
+    </data>
+    <!-- 注意由于MPAndroidChart库的 限制，bind的顺序不能乱-->
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:customOptions="@{customOptions}"
+        app:globalOptions="@{globalOptions}"
+        app:leftAxisOptions="@{leftAxisOptions}"
+        app:legendOptions="@{legendOptions}"
+        app:rightAxisOptions="@{rightAxisOptions}"
+        app:xAxisOptions="@{xAxisOptions}"
+        bind:data="@{data}"
+        bind2:animateX="@{animateX}"
+        bind2:animateY="@{animateY}"
+        >
+
+    </com.github.mikephil.charting.charts.PieChart>
+</layout>

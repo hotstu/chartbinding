@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- color theme default for chart-->
+    <color name="chart_background" >#fef8ef</color>
+    <color name="chart_text" >#333333</color>
+    <color name="chart_subtext" >#aaa</color>
+    <color name="chart_item_a" >#d87c7c</color>
+    <color name="chart_item_b" >#919e8b</color>
+    <color name="chart_item_c" >#d7ab82</color>
+    <color name="chart_item_d" >#6e7074</color>
+    <color name="chart_item_e" >#61a0a8</color>
+    <color name="chart_item_f" >#efa18d</color>
+    <color name="chart_item_g" >#787464</color>
+    <color name="chart_item_h" >#cc7e63</color>
+    <color name="chart_item_i" >#724e58</color>
+    <color name="chart_item_j" >#4b565b</color>
+</resources>

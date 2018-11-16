@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChartBinding" >
+        <attr name="chart_item_a" format="color" />
+        <attr name="chart_item_b" format="color" />
+        <attr name="chart_item_c" format="color" />
+        <attr name="chart_item_d" format="color" />
+        <attr name="chart_item_e" format="color" />
+        <attr name="chart_item_f" format="color" />
+        <attr name="chart_item_g" format="color" />
+        <attr name="chart_item_h" format="color" />
+        <attr name="chart_item_i" format="color" />
+        <attr name="chart_item_j" format="color" />
+        <attr name="chart_background" format="color" />
+        <attr name="chart_text" format="color" />
+        <attr name="chart_subtext" format="color" />
+    </declare-styleable>
+</resources>

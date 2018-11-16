@@ -1,0 +1,12 @@
+apply plugin: 'maven'
+//upload to local maven, for debug only
+//注意⚠️:   插件修改后运行前需要重新发布: ./gradlew -p plugin clean build uploadArchives --info
+uploadArchives {
+    //println(project.name)
+    repositories.mavenDeployer {
+        repository(url: uri("${userHome}/repo"))
+        pom.groupId = project.group
+        pom.artifactId = project.name
+        pom.version = project.version
+    }
+}

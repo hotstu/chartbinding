@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="github.hotstu.chartbinding.SeriesDescription" />
+    </data>
+
+
+    <github.hotstu.chartbinding.BaseChartView
+        android:id="@+id/basechart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/chart_background"
+        android:padding="10dp"
+        app:series="@{data}" />
+
+</layout>
+
