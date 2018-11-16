@@ -7,7 +7,7 @@ Android DataBinding wrapper for MPAndroidChart, using chart in a MVVM way!
 the goal of this lib is to making a more simple way to make chart for light charting usage,
 avoiding the complex property settings.
 
-<img src="./preview/1.png" width="400">
+<img src="./preview/1.gif" width="400">
 
 ## How to use
 
