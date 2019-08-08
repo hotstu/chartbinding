@@ -1,15 +1,12 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.userHome = System.getProperty("user.home")
-    ext.bintray_user = "hglf"
-    ext.Repository = "maven"
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
 
@@ -22,15 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            url uri("${userHome}/repo")//本地仓库 debug use
-        }
-        maven {
-            url "https://dl.bintray.com/$bintray_user/$Repository"
-        }
-        repositories {
-            maven { url 'https://jitpack.io' }
-        }
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -45,8 +34,8 @@ subprojects {
         }
     }
     if ("lib" == it.name) {
-        group = 'gitbub.hotstu.chartbinding'//发布到 bintray 的groupId号
-        version = "0.0.1" // 发布到 bintray 的版本号
+        group = 'github.hotstu.chartbinding'//发布到 bintray 的groupId号
+        version = "1.0.0" // 发布到 bintray 的版本号
     }
 }
 

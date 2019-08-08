@@ -1,23 +1,16 @@
-//打包 上传需在命令行执行 gradlew :tinyritro-compiler:bintrayUpload, 点击任务执行会报错
+//config ~/.gradle/gradle.properties add your bintray_user & bintray_key first
+//打包 上传需在命令行执行 gradlew bintrayUpload, 点击任务执行会报错
+if (!project.hasProperty('bintray_user')) {
+    println "ignore bintray upload"
+    return
+}
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-
 Properties properties = new Properties()
-
 File projectPropertiesFile = rootProject.file('project.properties')
 properties.load(projectPropertiesFile.newDataInputStream())
 
 
-
-def keystoreProperties = new Properties()
-try {
-    def keystorePropertiesFile = rootProject.file("local.properties");
-    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
-} catch (Exception e) {
-    println("local.properties not exits, return")
-    return
-}
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -77,8 +70,8 @@ artifacts {
     archives sourcesJar
 }
 bintray {
-    user = keystoreProperties['bintray.user']
-    key = keystoreProperties['bintray.key']
+    user = "${bintray_user}"
+    key = "${bintray_key}"
     configurations = ['archives']
     pkg {
         repo = properties.getProperty("project.repo")
@@ -95,6 +88,6 @@ javadoc { //javadoc 采用 utf-8 编码否则会报“GBK的不可映射字符�
         encoding "UTF-8"
         charSet "UTF-8"
         addStringOption('Xdoclint:none', '-quiet')
-    }
 
+    }
 }
