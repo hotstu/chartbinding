@@ -14,14 +14,14 @@ import androidx.databinding.BindingAdapter;
  */
 public class BindingAdpater {
 
-    @BindingAdapter("bind:globalOptions")
+    @BindingAdapter("globalOptions")
     public static void bindGlobalOptions(Chart chart, GlobalOptions options) {
         if (options == null) {
             return;
         }
         options.apply(chart);
     }
-    @BindingAdapter("bind:customOptions")
+    @BindingAdapter("customOptions")
     public static void bindCustomOptions(Chart chart, CustomOptions options) {
         if (options == null) {
             return;
@@ -29,14 +29,14 @@ public class BindingAdpater {
         options.apply(chart);
     }
 
-    @BindingAdapter("bind:legendOptions")
+    @BindingAdapter("legendOptions")
     public static void bindLegendOptions(Chart chart, LegendOptions options) {
         if (options != null) {
             options.apply(chart.getLegend());
         }
     }
 
-    @BindingAdapter("bind:xAxisOptions")
+    @BindingAdapter("xAxisOptions")
     public static void bindXAxisOptions(Chart chart, XAxisOptions options) {
         if (options == null || chart instanceof PieChart) {
             //pieChart dont have XAxis
@@ -45,7 +45,7 @@ public class BindingAdpater {
         options.apply(chart.getXAxis());
     }
 
-    @BindingAdapter("bind:leftAxisOptions")
+    @BindingAdapter("leftAxisOptions")
     public static void bindLeftAxisOptions(Chart chart, YAxisOptions options) {
         if (options == null) {
             return;
@@ -61,7 +61,7 @@ public class BindingAdpater {
         options.apply(yAxis);
     }
 
-    @BindingAdapter("bind:rightAxisOptions")
+    @BindingAdapter("rightAxisOptions")
     public static void bindRightAxisOptions(Chart chart, YAxisOptions options) {
         if (options == null) {
             return;
@@ -77,14 +77,14 @@ public class BindingAdpater {
         options.apply(yAxis);
     }
 
-    @BindingAdapter("bind:animateX")
+    @BindingAdapter("animateX")
     public static void bindAnimateX(Chart chart, boolean aniamte) {
         if (aniamte) {
             chart.animateX(1000);
         }
     }
 
-    @BindingAdapter("bind:animateY")
+    @BindingAdapter("animateY")
     public static void bindAnimateY(Chart chart, boolean aniamte) {
         if (aniamte) {
             chart.animateY(1000);

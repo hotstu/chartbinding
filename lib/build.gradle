@@ -34,5 +34,4 @@ dependencies {
 }
 
 
-apply from: "../deployBintray.gradle"
-apply from: "../deployLocalMaven.gradle"
+apply from: "./gradle-mavenizer.gradle"

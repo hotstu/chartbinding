@@ -99,16 +99,19 @@ public class BaseChartView extends FrameLayout {
             }
             mSeriesDescrption = series;
             removeAllViews();
-            mBinding = BuildChart(mSeriesDescrption);
-            mBinding.setVariable(BR.globalOptions, mSeriesDescrption.globalOptions);
-            mBinding.setVariable(BR.legendOptions, mSeriesDescrption.legendOptions);
-            mBinding.setVariable(BR.xAxisOptions, mSeriesDescrption.xAxisOptions);
-            mBinding.setVariable(BR.leftAxisOptions, mSeriesDescrption.leftAxisOptions);
-            mBinding.setVariable(BR.rightAxisOptions, mSeriesDescrption.rightAxisOptions);
-            mBinding.setVariable(BR.customOptions, mSeriesDescrption.customOptions);
-            mBinding.setVariable(BR.animateX, mSeriesDescrption.animateX);
-            mBinding.setVariable(BR.animateY, mSeriesDescrption.animateY);
-            mBinding.setVariable(BR.data, buildData(mSeriesDescrption));
+            if (mSeriesDescrption != null) {
+                mBinding = BuildChart(mSeriesDescrption);
+                mBinding.setVariable(BR.globalOptions, mSeriesDescrption.globalOptions);
+                mBinding.setVariable(BR.legendOptions, mSeriesDescrption.legendOptions);
+                mBinding.setVariable(BR.xAxisOptions, mSeriesDescrption.xAxisOptions);
+                mBinding.setVariable(BR.leftAxisOptions, mSeriesDescrption.leftAxisOptions);
+                mBinding.setVariable(BR.rightAxisOptions, mSeriesDescrption.rightAxisOptions);
+                mBinding.setVariable(BR.customOptions, mSeriesDescrption.customOptions);
+                mBinding.setVariable(BR.animateX, mSeriesDescrption.animateX);
+                mBinding.setVariable(BR.animateY, mSeriesDescrption.animateY);
+                mBinding.setVariable(BR.data, buildData(mSeriesDescrption));
+            }
+
         }
         invalidate();
     }
